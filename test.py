@@ -30,26 +30,40 @@ while num > 0:
     # user (j가 짝수) 
     if who:
         # input 받기 
+        user = input("사용자: ") #input은 str로 저장됨
         # num == 369
         if agree:
-            # o -> input == '짝' 
-            j += 1
+            # o -> user == '짝' 
+            if user == "짝":
+                j += 1
+                num += 1
             # x -> break
+            else:
+                break
         # num != 369
         else: 
-            # o ->  input == num
-            j += 1
+            # o ->  user == num
+            int_user = int(user)
+            if num == int_user:
+                j += 1
+                num += 1
             # x -> break
+            else:
+                break
     # com (j가 홀수)
     else:
         # num == 369
         if agree:
             # 짝 
+            print("com: 짝")
             j += 1
+            num += 1
         # num != 369
         else:
             # num
+            print(f"com: {num}")
             j += 1
+            num += 1
 
 # break -> game over
 print("game over")
