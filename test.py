@@ -44,7 +44,7 @@ while num > 0:
         else: 
             # o ->  user == num
             int_user = int(user)
-            if num == int_user:
+            if user == int_user:
                 j += 1
                 num += 1
             # x -> break
