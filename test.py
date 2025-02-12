@@ -12,29 +12,42 @@ def who(j):
     return False
 
 # (함수)
-#  3 6 9 인가? 
-    # 369 0 -> ture
-    # 369 x -> false
+#  NUM == 3 6 9 ?? 
+def agree(num):
+    str_num = str(num)
+    for a in range(len(str_num)):
+        # 369 0 -> ture         
+        if str_num[a] == '3' or str_num[a] == '6' or str_num[a] == '9':
+            num = int(str_num)
+            return  True
+        # 369 x -> false
+        else:
+            num = int(str_num)
+            return False
 
 # while문
 while num > 0:
     # user (j가 짝수) 
     if who:
         # input 받기 
-        # num() == 369
+        # num == 369
+        if agree:
             # o -> input == '짝' 
             j += 1
             # x -> break
-        # num != 369 
+        # num != 369
+        else: 
             # o ->  input == num
             j += 1
             # x -> break
     # com (j가 홀수)
     else:
         # num == 369
+        if agree:
             # 짝 
             j += 1
         # num != 369
+        else:
             # num
             j += 1
 
